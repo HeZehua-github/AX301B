@@ -1,0 +1,35 @@
+`timescale 1ns/1ns
+
+module key_tb();
+    reg     clk;
+    reg     rst_n;
+    reg     [2:0]   KEY;
+    wire 	[3:0]   LED;
+key key0(
+    .CLK_50M(clk),
+    .RST_n(rst_n),
+    .KEY(KEY),
+    .LED(LED)
+);
+
+
+initial begin
+	clk = 0;
+	rst_n = 1;
+	KEY = 3'b111;
+	#50;rst_n=0;
+	#50;rst_n=1;
+end
+
+always #1 clk = ~clk;
+always begin
+	#10_000_000 KEY = 3'b110;
+	#10_000_000 KEY = 3'b111;
+	#10_000_000 KEY = 3'b110;
+	#10_000_000 KEY = 3'b111;
+	#10_000_000 KEY = 3'b101;
+	#10_000_000 KEY = 3'b111;	
+	#10_000_000 KEY = 3'b011;
+	#10_000_000 KEY = 3'b111;
+end
+endmodule

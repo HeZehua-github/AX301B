@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/FPGA_Project/AX301demo/key/prj/simulation/modelsim
+vkey
+Z1 !s110 1602935587
+!i10b 1
+!s100 LPJ462aKQUz<WkESXK:zj0
+IMezFaYjePJT9LNgK?gOPR3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1602935556
+8E:/FPGA_Project/AX301demo/key/rtl/key.v
+FE:/FPGA_Project/AX301demo/key/rtl/key.v
+L0 2
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1602935587.000000
+!s107 E:/FPGA_Project/AX301demo/key/rtl/key.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Project/AX301demo/key/rtl|E:/FPGA_Project/AX301demo/key/rtl/key.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Project/AX301demo/key/rtl
+Z6 tCvgOpt 0
+vkey_tb
+R1
+!i10b 1
+!s100 UXY8hZLZaQY6Hg@^j::=02
+Ihe`z>oD4QV65b:@hZ>^0:3
+R2
+R0
+w1602927401
+8E:/FPGA_Project/AX301demo/key/prj/../testbenth/key_tb.vt
+FE:/FPGA_Project/AX301demo/key/prj/../testbenth/key_tb.vt
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/FPGA_Project/AX301demo/key/prj/../testbenth/key_tb.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Project/AX301demo/key/prj/../testbenth|E:/FPGA_Project/AX301demo/key/prj/../testbenth/key_tb.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Project/AX301demo/key/prj/../testbenth
+R6

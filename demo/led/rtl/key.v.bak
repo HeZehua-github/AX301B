@@ -1,0 +1,38 @@
+`timescale 1ns/1ps
+module key(
+    input CLK_50M,
+    input RST_n,
+    input [2:0] KEY,
+    output reg [3:0] LED
+);
+reg [2:0] KEY_stay0,KEY_stay1;
+always @(posedge CLK_50M or negedge RST_n) begin
+    if(!RST_n)  KEY_stay<=3'b000;
+    else if(count==20'd1_000_000) begin
+        KEY_stay0<=KEY;
+        KEY_stay1<=KEY_stay0;
+end
+reg [19:0]count;
+always @(posedge CLK_50M or negedge RST_n) begin
+    if(!RST_n)  count<=20'd0;
+    else if(count==20'd1_000_000)  count<=20'd0;
+    else count<=count+1'b1;
+end
+
+always @(posedge CLK_50M or negedge RST_n) begin
+    if(!RST_n)  LED<=4'b0001;
+    else if(KEY_stay1==KEY_stay0)begin
+        case(KEY_stay0)
+            001://KEY0按下
+                LED<={LED[2:1],LED[0],LEDP[3]};
+            010://KEY1按下
+                LED<={LED[0],LED[3:1]};
+            100://KEY2按下
+                LED<= ~LED;
+            default:
+                LED<=LED;
+        endcase
+    end
+end
+
+endmodule
